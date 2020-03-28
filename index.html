@@ -7,24 +7,27 @@
 </head>
 <body>
 	<div id="container">
-		<h1>Welcome</h1>
-		<br>
-		<div class="log">
-			<button onclick="login()">Log in</button>
-			<button onclick="signup()">Sign up</button>
-		</div>
-		
-		<div id="login">
-		</div><!--login-->
-		
-		<div id="signup">
-		</div><!--signup-->
-		
+		<div class="centered">
+			<h1>Welcome</h1>
+			<br>
+			<div class="log">
+				<button onclick="login()" id="log-b">Log in</button>
+				<button onclick="signup()" id="sign-b">Sign up</button>
+			</div>
+			
+			<div id="login">
+			</div><!--login-->
+			
+			<div id="signup">
+			</div><!--signup-->
+		</div><!--centered-->
 	</div><!--container-->
-	<script>
+	<script type="text/javascript">
 		function login() {
-			document.getElementById("signup").innerHTML = "";
-			document.getElementById("login").innerHTML = 
+			document.getElementById('sign-b').classList.remove('selected');
+			document.getElementById('log-b').classList.add('selected');
+			document.getElementById('signup').innerHTML = "";
+			document.getElementById('login').innerHTML = 
 			"<form class='login' method='post'>" + 
 			 
 			"<label for='uname'><b>Username</b></label>" + 
@@ -37,8 +40,10 @@
 			
 		}
 		function signup() {
-			document.getElementById("login").innerHTML = "";
-			document.getElementById("signup").innerHTML = 
+			document.getElementById('sign-b').classList.add('selected');
+			document.getElementById('log-b').classList.remove('selected');
+			document.getElementById('login').innerHTML = "";
+			document.getElementById('signup').innerHTML = 
 			"<form class='signup' method='post'>" +
 			
 			"<label for='uname'><b>Username</b></label>" +
