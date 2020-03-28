@@ -9,8 +9,6 @@ body * {
 }
 #container {
 	margin: auto;
-	
-	/*background-color: #fafaf9;*/
 }
 .centered {
 	padding: 100px;
@@ -22,10 +20,23 @@ body * {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-#message {
+.message {
+	margin: 20px;
+	padding: 15px;
 	height: 200px;
-	width: 300px;
+	min-width: 200px;
+	max-width: 300px;
 	overflow: auto;
+	display: inline-block;
+	text-align: center;
+	background-color: #fafaf9;
+}
+.ctrmsg {
+	
+}
+#usr {
+	position: fixed;
+	top:0;
 }
 button {
 	color: #fff;
