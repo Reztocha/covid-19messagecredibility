@@ -28,7 +28,7 @@
 			document.getElementById('log-b').classList.add('selected');
 			document.getElementById('signup').innerHTML = "";
 			document.getElementById('login').innerHTML = 
-			"<form class='login' method='post'>" + 
+			"<form action='messages.php' class='login' method='post'>" + 
 			 
 			"<label for='uname'><b>Username</b></label>" + 
 			"<input type='text' placeholder='Enter Username' name='uname' maxlength='25' required>" + 
@@ -36,9 +36,9 @@
 			"<label for='psw'><b>Password</b></label>" + 
 			"<input type='password' placeholder='Enter Password' name='psw' required>" + 
 			
-			"<button type='submit'>Submit</button></form>" +
+			"<button name='login' type='submit'>Submit</button></form>" +
 			
-			"<p><a href="">Forgot Password</a>;
+			"<p><a href=''>Forgot Password</a>";
 			
 		}
 		function signup() {
@@ -46,7 +46,7 @@
 			document.getElementById('log-b').classList.remove('selected');
 			document.getElementById('login').innerHTML = "";
 			document.getElementById('signup').innerHTML = 
-			"<form class='signup' method='post'>" +
+			"<form action='messages.php' class='signup' method='post'>" +
 			
 			"<label for='uname'><b>Username</b></label>" +
 			"<input type='text' placeholder='Enter Username' name='uname' maxlength='25' required>" +
@@ -58,9 +58,9 @@
 			"<input type='password' placeholder='Enter Password' name='psw' required>" +
 			
 			"<label for='r-psw'><b>Re-enter Password</b></label>" +
-			"<input type='r-password' placeholder='Re-enter Password' name='r-psw' required>" +
+			"<input type='password' placeholder='Re-enter Password' name='r-psw' required>" +
 			
-			"<button type='submit'>Submit</button></form>";
+			"<button name='signup' type='submit'>Submit</button></form>";
 		}
 	</script>
 </body>

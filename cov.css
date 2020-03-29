@@ -31,12 +31,16 @@ body * {
 	text-align: center;
 	background-color: #fafaf9;
 }
-.ctrmsg {
-	
-}
-#usr {
+#topbar {
 	position: fixed;
 	top:0;
+	color: #fff;
+	background-color: #838cac;
+	padding: 5px;
+}
+#topbar * {
+	display: inline;
+	color: #fff;
 }
 button {
 	color: #fff;
