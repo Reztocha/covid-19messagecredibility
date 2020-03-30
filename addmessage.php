@@ -17,7 +17,10 @@
 		
 				mysqli_query($dbc, $r);
 				
-				echo "<p>You have entered your message for voting.</p>";
+				echo "<p>You have entered your message for voting.</p>
+				
+				<script type='text/javascript'>location.href = 'messages.php';</script>
+				";
 
 				mysqli_close($dbc);
 				

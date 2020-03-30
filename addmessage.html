@@ -1,21 +1,32 @@
+<?php
+	include('mysqli_connect.php');
+	$message = $_POST['message'];
+	$username = $_SESSION['uname'];
+echo "
 <!DOCTYPE html>
 <html>
 <head>
-	<html lang="en">
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="cov.css">
+	<html lang='en'>
+	<meta charset='utf-8'/>
+	<link rel='stylesheet' type='text/css' href='cov.css'>
 </head>
 <body>
-	<div id="container">
-		<div class="centered">
-			<form action="addmessage.php" method="post">
-				<label for="message">What is the message you'd like to be evaluated?</label>
+	<div id='topbar'>
+		<p>$username</p>
+		<p><a href='addmessage.html'>Add a Message</a></p>
+	</div><!--topbar-->
+	<div id='container'>
+		<div class='centered'>
+			<form action='addmessage.php' method='post'>
+				<label for='message'>What is the message you'd like to be evaluated?</label>
 				<br>
-				<textarea type="text" id="message" name="message"></textarea><br>
-				<input type="submit" value="Submit">
+				<textarea type='text' id='message' name='message'></textarea><br>
+				<input type='submit' value='Submit'>
 			</form>
 		</div>
 		
 	</div><!--container-->
 </body>
-</html>
+</html>";
+$_SESSION['uname'] = $username;
+?>
