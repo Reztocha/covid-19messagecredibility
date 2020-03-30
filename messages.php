@@ -5,6 +5,7 @@
 		include('mysqli_connect.php');
 		
 		$username = $_POST['uname'];
+		$password = $_POST['psw'];
 		
 		if (isset($_POST['uname']) && isset($_POST['login'])) 
 		{
@@ -25,11 +26,42 @@
 				else
 				{
 					#Username already exists
+					$psw_query = mysqli_query($dbc,"SELECT * FROM users
+											   WHERE username = '$password'");
+					$count = mysqli_num_rows($psw_query);
+					if($count == 0) {
+						echo "
+						<script>
+						  window.history.back();
+						</script>";
+					}
 				}
 			}
 		}
 		elseif (isset($_POST['uname']) && isset($_POST['signup'])) {
+			$username_query = mysqli_query($dbc,"SELECT * FROM users
+											   WHERE username = '$username'");
+				$count = mysqli_num_rows($username_query);
+				if($count == 0) {
+					if(isset($_POST['psw']) && isset($_POST['email'])) {
+						$email = $_POST['email'];
+						$r = "insert into users (username, password, email) values ('$username','$password','$email')";
 			
+						mysqli_query($dbc, $r);
+					}
+					else {
+						echo "
+						<script>
+						  window.history.back();
+						</script>";
+					}
+				}
+				else {
+					echo "
+						<script>
+						  window.history.back();
+						</script>";
+				}
 		}
 	echo "<html lang='en'>
 	<meta charset='utf-8'/>
