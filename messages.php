@@ -78,7 +78,6 @@
 		<div>";
 			$r = "select id, content, votesup, votesdown from messages";
 			$result = mysqli_query($dbc, $r);
-
 			
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {

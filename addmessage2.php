@@ -14,7 +14,6 @@ echo "
 <body>
 	<div id='topbar'>
 		<p>" . $_SESSION['uname'] . "</p>
-		<p><a href='addmessage.php'>Add a Message</a></p>
 	</div><!--topbar-->
 	<div id='container'>
 		<div class='centered'>";

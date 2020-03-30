@@ -12,6 +12,7 @@ echo "
 <body>
 	<div id='topbar'>
 		<p>" . $_SESSION['uname'] . "</p>
+		<p><a href='messages.php'>Home</a></p>
 	</div><!--topbar-->
 	<div id='container'>
 		<div class='centered'>
